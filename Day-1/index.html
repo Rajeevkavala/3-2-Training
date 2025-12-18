@@ -1,43 +1,460 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This this page is developed by Rajeev">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Rajeev">
-    <!-- <meta http-equiv="refresh" content="10;url=https://www.rajeevkavala.me"> -->
-    <title>Meta Tag Hands On</title>
-</head>
-<body>
-    <!-- <img src="virat kohli.jpg" alt="ddd" height="250" width="150"> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Rajeev Kavala | Full Stack Developer Portfolio</title>
+    <meta name="title" content="Rajeev Kavala | Full Stack Developer Portfolio" />
+    <meta name="description" content="Rajeev Kavala - Full Stack Developer specializing in React, Node.js, Next.js, and Spring Boot. View my projects including NoteAura AI SaaS, ClickNBuy E-Commerce, and more." />
+    <meta name="keywords" content="Rajeev Kavala, Full Stack Developer, Web Developer, React Developer, Node.js, Next.js, Spring Boot, MERN Stack, Portfolio, Software Engineer, India" />
+    <meta name="author" content="Rajeev Kavala" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://rajeevkavala.dev/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rajeevkavala.dev/" />
+    <meta property="og:title" content="Rajeev Kavala | Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Full Stack Developer specializing in React, Node.js, Next.js, and Spring Boot. Passionate about crafting intelligent web solutions." />
+    <meta property="og:image" content="https://rajeevkavala.dev/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Rajeev Kavala Portfolio" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://rajeevkavala.dev/" />
+    <meta name="twitter:title" content="Rajeev Kavala | Full Stack Developer Portfolio" />
+    <meta name="twitter:description" content="Full Stack Developer specializing in React, Node.js, Next.js, and Spring Boot. Passionate about crafting intelligent web solutions." />
+    <meta name="twitter:image" content="https://rajeevkavala.dev/og-image.jpg" />
+    <meta name="twitter:creator" content="@rajeevkavala" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#432dd7" />
+    <meta name="msapplication-TileColor" content="#432dd7" />
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rajeev Kavala",
+      "url": "https://rajeevkavala.dev",
+      "image": "https://rajeevkavala.dev/Rajeevkavala.png",
+      "jobTitle": "Full Stack Developer",
+      "description": "Full Stack Developer specializing in React, Node.js, Next.js, and Spring Boot",
+      "sameAs": [
+        "https://github.com/rajeevkavala",
+        "https://linkedin.com/in/rajeevkavala",
+        "https://twitter.com/rajeevkavala"
+      ],
+      "knowsAbout": ["JavaScript", "React", "Node.js", "Next.js", "Spring Boot", "MongoDB", "Web Development"],
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Your University Name"
+      }
+    }
+    </script>
+    
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Rajeev Kavala Portfolio",
+      "url": "https://rajeevkavala.dev",
+      "description": "Personal portfolio of Rajeev Kavala - Full Stack Developer",
+      "author": {
+        "@type": "Person",
+        "name": "Rajeev Kavala"
+      }
+    }
+    </script>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assignment-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Skip Navigation Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="visible">
+      <div class="navbar-real" role="navigation" aria-label="Main navigation">
+        <nav class="navbar">
+          <ul class="nav-links">
+            <li><a href="#" id="home" aria-current="page">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
+      <main id="main-content" class="hero">
+        <div class="hero-left">
+          <div class="main-heading">
+            <h1>👋 Hello, I'm Rajeev Kavala</h2>
+          </div>
+          <div class="more-info-main-heading">
+            <h1>Full Stack Developer</h2>
+            <p>
+              Passionate about crafting intelligent web solutions that bridge
+              technology and real-world impact.
+            </p>
+          </div>
+          <div class="resume-btn">
+            <button>
+              Resume
+              <img
+                src="https://cdn.jsdelivr.net/npm/heroicons@2.0.13/24/outline/document-text.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="Rajeevkavala.png" alt="" />
+        </div>
+      </main>
+      <section id="skills" class="skills-section">
+        <div class="skills-header">
+          <span
+            >💻 This is my <span class="header-to-color">Tech Stack</span>
+          </span>
+        </div>
+        <div class="skills-div">
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML"
+              width="32"
+              height="32"
+            />
+            HTML
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS"
+              width="32"
+              height="32"
+            />
+            CSS
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              width="32"
+              height="32"
+            />
+            JavaScript
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React"
+              width="32"
+              height="32"
+            />
+            React
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind CSS"
+              width="32"
+              height="32"
+            />
+            Tailwind CSS
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg"
+              alt="Next.js"
+              width="32"
+              height="32"
+            />
+            Next.js
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              width="32"
+              height="32"
+            />
+            Node.js
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              alt="Express.js"
+              width="32"
+              height="32"
+            />
+            Express.js
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+              alt="Spring Boot"
+              width="32"
+              height="32"
+            />
+            Spring Boot
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB"
+              width="32"
+              height="32"
+            />
+            MongoDB
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+              alt="Firebase"
+              width="32"
+              height="32"
+            />
+            Firebase
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+              width="32"
+              height="32"
+            />
+            Git
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              width="32"
+              height="32"
+            />
+            GitHub
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
+              alt="Postman"
+              width="32"
+              height="32"
+            />
+            Postman
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt="VS Code"
+              width="32"
+              height="32"
+            />
+            VS Code
+          </div>
+          <div class="skill">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"
+              alt="IntelliJ IDEA"
+              width="32"
+              height="32"
+            />
+            IntelliJ IDEA
+          </div>
+          <div class="skill">
+            <img
+              src="https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg"
+              alt="PayPal"
+              width="32"
+              height="32"
+            />
+            PayPal
+          </div>
+          <div class="skill">
+            <img
+              src="/Day-5&6/Portfolio/razorpay.svg"
+              alt="Razorpay"
+              width="32"
+              height="32"
+            />
+            Razorpay
+          </div>
+          <div class="skill">
+            <img
+              src="/Day-5&6/Portfolio/Langchain.svg"
+              alt="LangChain"
+              width="32"
+              height="32"
+            />
+            LangChain
+          </div>
+          <div class="skill">
+            <img
+              src="/Day-5&6/Portfolio/gemini-color.svg"
+              alt="Gemini"
+              width="32"
+              height="32"
+            />
+            Gemini
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="projects-section">
+        <div class="project-header">
+          <span
+            >😎 Some of my <span class="project-heading">Best Works</span></span
+          >
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-link">
+              <img src="/Day-5&6/Portfolio/noteaura.webp" alt="Project 1" />
+              <a href="#">View Project</a>
+            </div>
+            <h3>NoteAura – AI Note-Taking SaaS</h3>
+            <p>
+              Developed a productivity SaaS with AI-based summarization, PDF
+              Q&A, note management, and MCQ generation. Integrated role-based
+              auth and payments via Razorpay.
+            </p>
+          </div>
+          <div class="project-card">
+            <div class="project-link">
+              <img src="/Day-5&6/Portfolio/clicknbuy_thumbnail.webp" alt="Project 1" />
+              <a href="#">View Project</a>
+            </div>
+            <h3>ClickNBuy – E-Commerce Platform</h3>
+            <p>
+              Built a full-stack e-commerce site with payments via PayPal and
+              Razorpay. Implemented order tracking, filtering, and product
+              management.
+            </p>
+          </div>
+          <div class="project-card">
+            <div class="project-link">
+              <img src="/Day-5&6/Portfolio/codemasters_thumbnail.webp" alt="Project 1" />
+              <a href="#">View Project</a>
+            </div>
+            <h3>CodeMasters – E-Learning Platform</h3>
+            <p>
+              Developed an LMS with AI-powered doubt resolution and intelligent
+              search. Managed 50+ users and handled 100+ queries effectively.
+            </p>
+          </div>
+          <div class="project-card">
+            <div class="project-link">
+              <img src="/Day-5&6/Portfolio/tic-tac-toe.svg" alt="Project 1" />
+              <a href="#">View Project</a>
+            </div>
+            <h3>TicTacToe AI – Web Game</h3>
+            <p>
+              Created a responsive browser-based game with an AI opponent using
+              intelligent move prediction. Played over 100 times.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- <canvas id="myCanvas" width="200" height="200" style="border: 2px solid black;">
-    </canvas>
-
-    <script>
-        const c = document.getElementById("myCanvas");
-        const ctx = c.getContext("2d");
-        ctx.fillStyle = "red";
-        ctx.fillRect(10, 10, 150, 75);
-    </script> -->
-
-    <form action="#" method="post">
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        <br>
-        <br>
-        <label for="date">Date: </label>
-        <input type="date" name="date" id="date">
-        <br><br>
-        <label for="range">Range: </label>
-        <input type="range" name="range" id="range">
-        <br><br>
-        <label for="number">Number: </label>
-        <input type="number" name="num" id="num">
-        <br><br>
-        <label for="color">Color: </label>
-        <input type="color" name="color" id="color">
-    </form>
-</body>
+      <section id="experience" class="experience" aria-labelledby="experience-title">
+        <div class="experience-section">
+          <div class="experience-header">
+            <h2 id="experience-title">
+              💼 My prior
+              <span class="experience-highlight">Work Experience</span>
+            </h2>
+          </div>
+          <article class="experience-div" itemscope itemtype="https://schema.org/WorkExperience">
+            <div class="experience-company">
+              <img src="/Day-5&6/Portfolio/AICTE-Logo.webp" alt="AICTE Logo - All India Council for Technical Education" loading="lazy" />
+              <div class="experience-company-info">
+                <h3 itemprop="name">EY Global Delivery Services (via AICTE Internship)</h3>
+                <p itemprop="jobTitle">Web Developer Intern</p>
+              </div>
+            </div>
+            <div class="experience-info">
+              <p>Dec 2024 - Jan 2025</p>
+              <ul>
+                <li>
+                  🛠️ Built a modern E-Commerce application using the MERN stack
+                  as part of a 6-week internship.
+                </li>
+                <li>
+                  👥 Implemented user authentication and admin panel
+                  functionalities.
+                </li>
+                <li>
+                  💳 Integrated PayPal and Razorpay for seamless payment
+                  processing.
+                </li>
+                <li>
+                  🏆 Ranked in the Top 10 out of 100+ projects for functionality
+                  and user experience.
+                </li>
+              </ul>
+              <button type="button" class="cerficate-btn">
+                📄 [View Certificate]
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact-card" aria-labelledby="contact-title">
+        <div class="content">
+          <div class="left">
+            <h2 id="contact-title">WANT ME ON YOUR TEAM? <span>✨</span></h2>
+            <p>LET’S MAKE IT HAPPEN <span>🌟</span></p>
+            <nav class="icons" aria-label="Social media links">
+              <a href="https://github.com/rajeevkavala" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/rajeevkavala" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://linkedin.com/in/rajeevkavala" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            </nav>
+          </div>
+          <div class="right">
+            <a href="mailto:rajeev@example.com" class="contact-btn" aria-label="Send email to Rajeev"
+              >LET'S GET IN TOUCH <i class="fas fa-envelope" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </header>
+    
+    <footer class="site-footer">
+      <p class="footer">© Rajeev Kavala <time datetime="2025">2025</time>. All rights reserved.</p>
+    </footer>
+    
+    <script src="assignment-1.js"></script>
+  </body>
 </html>
+
+
