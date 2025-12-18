@@ -106,8 +106,20 @@
     <header class="visible">
       <div class="navbar-real" role="navigation" aria-label="Main navigation">
         <nav class="navbar">
+          <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
           <ul class="nav-links">
             <li><a href="#" id="home" aria-current="page">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+          <ul class="mobile-nav" id="mobile-nav" hidden>
+            <li><a href="#" id="home-mobile" aria-current="page">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -454,6 +466,31 @@
     </footer>
     
     <script src="assignment-1.js"></script>
+    <script>
+    // Hamburger menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const mobileNav = document.getElementById('mobile-nav');
+      hamburger.addEventListener('click', function() {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !expanded);
+        if (mobileNav.hasAttribute('hidden')) {
+          mobileNav.removeAttribute('hidden');
+        } else {
+          mobileNav.setAttribute('hidden', '');
+        }
+        hamburger.classList.toggle('open');
+      });
+      // Close mobile nav on link click
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileNav.setAttribute('hidden', '');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.classList.remove('open');
+        });
+      });
+    });
+    </script>
   </body>
 </html>
 
