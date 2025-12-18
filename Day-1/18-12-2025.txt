@@ -1,0 +1,3 @@
+I have learned to push the code to the repository successfully.
+i have learned to pull the code from the repository successfully.
+I have also learned to create branches and merge them back to the main branch without conflicts.
