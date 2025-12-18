@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajeev's Portfolio</title>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    header {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <header>
+    <h1>😎 Rajeev - Web Developer</h1>
+    <p>Delivering success with every line of code</p>
+    <nav>
+      <a href="#home">Home</a> |
+      <a href="#about">About</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <article>
+      <p>Hello! I'm Rajeev, a frontend web developer with a passion for creating clean and responsive designs. I love blending creativity with performance to craft immersive digital experiences.</p>
+      <canvas id="myCanvas" width="300" height="150"></canvas>
+      <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#0000E6"
+        ctx.fillRect(10, 10, 500, 400);
+      </script>
+      <br>
+      <video src="/Day-5/research_video.mp4"controls height="300" width="300"></video>
+      <br>
+      <audio controls muted loop>
+        <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </article>
+  </section>
+  <br><br>
+  <section id="projects">
+    <h2>My Projects</h2>
+    <article>
+      <h3>Project 1: NoteAura – AI Note-Taking SaaS</h3>
+      <p>Developed a productivity SaaS with AI-based summarization, PDF Q&A, note management, and MCQ generation. Integrated role-based auth and payments via Razorpay.</p>
+
+      <h3>Project 2: ClickNBuy – E-Commerce Platform</h3>
+      <p>Built a full-stack e-commerce site with payments via PayPal and Razorpay. Implemented order tracking, filtering, and product management.</p>
+    </article>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+        <br>
+      <label for="date">Preferred Contact Date:</label>
+      <input type="date" id="date" required />
+        <br>
+      <label for="interest">Interest Level (1-10):</label>
+      <input type="range" min="1" max="10" id="interest" />
+        <br>
+      <label for="message">Your Message:</label>
+      <br>
+      <textarea id="message" rows="4" required></textarea>
+        <br>
+      <button type="submit">Send Message</button>
+    </form>
+    <br>
+    <aside>
+      <h4>📢 Latest News</h4>
+      <p>Currently working on an E-Commerce app at Pandit Technologies!</p>
+    </aside>
+  </section>
+      <footer>
+        &copy; 2025 | Rajeev | Built with HTML
+      </footer>
+
+  </center>
+
+</body>
+</html>
